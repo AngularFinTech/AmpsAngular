@@ -16,7 +16,7 @@ export class AmpsService {
 
 
   private processMessage(data: any): void {
-    console.log('Data : ', data.data);
+    console.log('In Main Thread Data : ', data.data);
   }
 
   public start(): void {
