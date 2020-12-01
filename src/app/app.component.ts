@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AmpsService} from './amps.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularAmps';
+
+  constructor(private ampsService: AmpsService) {
+  }
+
+  startAmps($event: MouseEvent): void  {
+
+    this.ampsService.start();
+
+  }
 }
