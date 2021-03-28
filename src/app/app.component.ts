@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {AmpsService} from './amps.service';
+import {nconf} from 'nconf';
+
 
 @Component({
   selector: 'app-root',
@@ -10,6 +12,7 @@ export class AppComponent {
   title = 'AngularAmps';
 
   constructor(private ampsService: AmpsService) {
+    nconf.argv().env().use('memory');
   }
 
   startAmps($event: MouseEvent): void  {
